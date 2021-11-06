@@ -1,0 +1,18 @@
+{
+    "manifest_version":2,
+
+    "name": "Sloth",
+    "description": "This extension will help you calm down",
+    "version":1.0,
+    "content_scripts": [
+    {
+        "matches":["<all_urls>"],
+        "js": ["content.js"]
+    }
+    ],
+
+    "browser_action": {
+        "default_icon": "smile.png",
+        "default_popup":"popup.html"
+    }
+}
