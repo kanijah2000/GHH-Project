@@ -28,11 +28,22 @@
 
         }
 
+        .video{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+
+        }
+
     </style>
 </head>
 <body>
     <h1 class="text-center" style="margin-top: 25px">Activities</h1>
     <h3 style="margin-right: 30px; margin-left: 10px;">Here are some quick activities to boost productivity!</h3>
+    <div class="video">
+        <iframe id="youtube-video" width="350" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
 
     <!-- figure out how to auto select tab and then remove it when another tab is clicked -->
     <ul class="nav nav-tabs fixed-bottom">
@@ -52,4 +63,5 @@
           </a>
         </li>
       </ul>
+      <script type="text/javascript" src="activity.js"></script>
     </body>
