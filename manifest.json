@@ -11,9 +11,9 @@
     }
     ],
 
-    "background": {
-        "scripts":["background.js"]
-    },
+    "permissions": [
+        "activeTab"
+    ],
 
     "browser_action": {
         "default_icon": "Slow Down.png",
