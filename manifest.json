@@ -3,7 +3,7 @@
 
     "name": "Sloth",
     "description": "This extension will help you calm down",
-    "version":1.0,
+    "version":"1.0",
     "content_scripts": [
     {
         "matches":["<all_urls>"],

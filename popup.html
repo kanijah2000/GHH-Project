@@ -4,17 +4,43 @@
     <script src="content.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <style type="text/css">
+        html {
+            margin: 0; 
+            height: 100%; 
+            overflow: hidden
+        }
+        
+        body {
+           width: 400px;
+           height: 600px;
+           overflow: hidden;
+        }
+        .container{
+            border-style: solid;
+            border-radius: 10px;
+            border-width: .75px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome Back!</h1>
-    <p>Give me a reminder every
-        <select class="form-control">
+    <h1 class="text-center" style="margin-top: 25px">Welcome Back!</h1>
+    <div class="container justify-content-center" style=" border-style: solid ">
+    <form>
+        <label >Give me a reminder every</label>
+        <select class="form-control" style="width:auto;">
             <option>20 minutes</option>
             <option>40 mintues</option>
             <option>1 hour</option>
             <option>2 hours</option>
             <option>3 hours</option>
           </select>
-          <button type="submit" class="btn btn-primary mb-2">Set time</button>
-    </p>
+          <button type="submit" id="set-timer" class="btn btn-primary mb-2">Set time</button>
+    </form>
+    <div id="quote">
+        
+    </div>
+    </div>
+        
 </body>
