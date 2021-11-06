@@ -18,12 +18,6 @@
            height: 600px;
            overflow: hidden;
         }
-        .container{
-            border-style: solid;
-            border-radius: 10px;
-            border-width: .75px;
-            text-align: center;
-        }
         .nav-item{
             width: 33%;
 
@@ -35,35 +29,57 @@
             font-size: medium;
         }
 
+        .container{
+            text-align: center;
+        }
+        ul{
+            list-style-type:none
+        }
+        .heading{
+            margin: auto;
+            margin-top: 25px; 
+            background-color: #6CC9BD;
+            width: fit-content;
+        }
+
+        .nav-tabs{
+            background-color: #43d6b9;
+        }
+        
+
     </style>
 </head>
 <body>
-    <h1 class="text-center" style="margin-top: 25px">Mindfulness</h1>
-    <h3 class="podcast__heading">
-        5-Minute Breathing Meditation
-        </h3>
-    <audio controls>
-        <source src="https://traffic.libsyn.com/mindfulorg/winston-breathing-5mins.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-      </audio>
-
-      <h3 class="podcast__heading">
-        10-Minute Awareness of Breath Practice
-        </h3>
-      <audio controls>
-        <source src="https://traffic.libsyn.com/mindfulorg/SusanKaiserGreenland.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-      </audio>
-
-      <h3 class="podcast__heading">
-        40-Minute Breathscape Practice
-        </h3>
-      <audio controls>
-        <source src="https://traffic.libsyn.com/mindfulorg/LovingKindness.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-      </audio>
-
-      <h3>Spotify Playlists</h3> 
+    <h1 class="text-center heading" style="margin-top: 25px">Mindfulness</h1>
+    <div class="container">
+        <h3 class="podcast__heading">
+            5-Minute Breathing Meditation
+            </h3>
+        <audio controls>
+            <source src="https://traffic.libsyn.com/mindfulorg/winston-breathing-5mins.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+          </audio>
+    
+          <h3 class="podcast__heading">
+            10-Minute Awareness of Breath Practice
+            </h3>
+          <audio controls>
+            <source src="https://traffic.libsyn.com/mindfulorg/SusanKaiserGreenland.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+          </audio>
+    
+          <h3 class="podcast__heading">
+            40-Minute Breathscape Practice
+            </h3>
+          <audio controls>
+            <source src="https://traffic.libsyn.com/mindfulorg/LovingKindness.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+          </audio>
+    
+    </div>
+    <div class="container" style="margin-top: 50px;">
+        <h3 >Spotify Playlists</h3> 
+    </div>
       <ul>
           <li><a href="https://open.spotify.com/playlist/37i9dQZF1DX4PP3DA4J0N8?si=889871ff16c244da&nd=1">Nature Sounds</a></li>
           <li><a href="https://open.spotify.com/playlist/37i9dQZF1DX4PP3DA4J0N8?si=889871ff16c244da&nd=1">Guided Meditation</a></li>
@@ -74,7 +90,7 @@
     <!-- figure out how to auto select tab and then remove it when another tab is clicked -->
     <ul class="nav nav-tabs fixed-bottom">
         <li class="nav-item text-center">
-          <a class="nav-link active" aria-current="page" href="popup.html">
+          <a class="nav-link" aria-current="page" href="popup.html">
               <img src="images/home.png" alt="home icon"/>
           </a>
         </li>
