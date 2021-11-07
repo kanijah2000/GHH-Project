@@ -18,5 +18,5 @@ let url =  urls[Math.floor(Math.random() * urls.length)]
 console.log(url);
 document.getElementById("youtube-video").setAttribute("src", url);
 }
-
-changeVideo();
+if (document.getElementById("youtube-video").getAttribute("src")==="")
+    changeVideo();
