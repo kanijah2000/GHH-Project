@@ -1,5 +1,9 @@
 // timer button
+import { saveAs } from 'file-saver';
+
 document.addEventListener('DOMContentLoaded', function() {
+    /*
+    CODE FOR TIMER:
     var checkTimerButton = document.getElementById('set-timer')
     checkTimerButton.addEventListener('click', function() {
     // null - don't need event
@@ -18,7 +22,37 @@ document.addEventListener('DOMContentLoaded', function() {
             milliseconds = time_int * 60000
         }
 
-        setTimeout(alert("Hey! You've been working hard! Time to take a 2 minute break."), milliseconds);
+        setInterval(alert("Hey! You've been working hard! Time to take a 2 minute break."), milliseconds);
         
+    */
+    var finishedEntryButton = document.getElementById('finishedEntry');
+    finishedEntryButton.addEventListener('click', function() {
+        var text = document.getElementById('journal');
+ 
+        function saveTextAsFile()
+        {
+            var textToSave = document.getElementById("finishedEntry").value;
+            var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+            var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+            var fileNameToSaveAs = document.getElementById("filename").value;
+            
+            var downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+            downloadLink.href = textToSaveAsURL;
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+            
+            downloadLink.click();
+        }
+            
+        function destroyClickedElement(event)
+        {
+            document.body.removeChild(event.target);
+        }           
+        saveTextAsFile();
     }, false);
+
 }, false);
+
